@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'django_rq',
     'import_export',
+    'user',
 ]
 
 MIDDLEWARE = [
@@ -159,6 +160,7 @@ INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
+AUTH_USER_MODEL = 'user.CustomUser'
 IMPORT_EXPORT_USE_TRANSACTIONS = True
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
