@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'video.apps.VideoConfig',
     'debug_toolbar',
     'django_rq',
+    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -152,11 +153,13 @@ RQ_QUEUES = {
     }
 }
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/staticfiles')
+
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
+IMPORT_EXPORT_USE_TRANSACTIONS = True
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-
 CACHE_TTL = 60 * 15
